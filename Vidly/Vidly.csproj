@@ -170,6 +170,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
@@ -196,9 +197,30 @@
     <Compile Include="Migrations\201909151954350_ApplyAnotationtocustomername.Designer.cs">
       <DependentUpon>201909151954350_ApplyAnotationtocustomername.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201909221906087_AddNameToMembershipType.cs" />
+    <Compile Include="Migrations\201909221906087_AddNameToMembershipType.Designer.cs">
+      <DependentUpon>201909221906087_AddNameToMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909221909571_SetNameOfMembershipTypes.cs" />
+    <Compile Include="Migrations\201909221909571_SetNameOfMembershipTypes.Designer.cs">
+      <DependentUpon>201909221909571_SetNameOfMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909221915326_AddCustomerBirthDate.cs" />
+    <Compile Include="Migrations\201909221915326_AddCustomerBirthDate.Designer.cs">
+      <DependentUpon>201909221915326_AddCustomerBirthDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909221942078_AddGenre.cs" />
+    <Compile Include="Migrations\201909221942078_AddGenre.Designer.cs">
+      <DependentUpon>201909221942078_AddGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909221942591_InsertGenre.cs" />
+    <Compile Include="Migrations\201909221942591_InsertGenre.Designer.cs">
+      <DependentUpon>201909221942591_InsertGenre.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -304,6 +326,11 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
+    <Content Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Shared\_ViewImports.cshtml" />
+    <Content Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -334,6 +361,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201909151954350_ApplyAnotationtocustomername.resx">
       <DependentUpon>201909151954350_ApplyAnotationtocustomername.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909221906087_AddNameToMembershipType.resx">
+      <DependentUpon>201909221906087_AddNameToMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909221909571_SetNameOfMembershipTypes.resx">
+      <DependentUpon>201909221909571_SetNameOfMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909221915326_AddCustomerBirthDate.resx">
+      <DependentUpon>201909221915326_AddCustomerBirthDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909221942078_AddGenre.resx">
+      <DependentUpon>201909221942078_AddGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909221942591_InsertGenre.resx">
+      <DependentUpon>201909221942591_InsertGenre.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
