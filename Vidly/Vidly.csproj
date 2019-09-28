@@ -217,6 +217,10 @@
     <Compile Include="Migrations\201909221942591_InsertGenre.Designer.cs">
       <DependentUpon>201909221942591_InsertGenre.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201909271923424_Genres.cs" />
+    <Compile Include="Migrations\201909271923424_Genres.Designer.cs">
+      <DependentUpon>201909271923424_Genres.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -228,6 +232,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\CustomerFormViewModel.cs" />
+    <Compile Include="ViewModels\MovieFormViewModel.cs" />
     <Compile Include="ViewModels\RandomMovieViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -379,6 +384,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201909221942591_InsertGenre.resx">
       <DependentUpon>201909221942591_InsertGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909271923424_Genres.resx">
+      <DependentUpon>201909271923424_Genres.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
