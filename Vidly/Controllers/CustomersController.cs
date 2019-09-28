@@ -30,11 +30,10 @@ namespace Vidly.Controllers
                 Customer = new Customer(),
                 MembershipTypes = membershipTypes
             };
-            return View("CustomerForm",viewModel);
+            return View("CustomerForm", viewModel);
         }
 
 
-        
         public ViewResult Index()
         {
             var customers = _context.Customers.Include(c => c.MembershipType).ToList();
@@ -50,13 +49,12 @@ namespace Vidly.Controllers
                 {
                     Customer = customer,
                     MembershipTypes = _context.MembershipTypes.ToList()
-
                 };
                 return View("CustomerForm", viewModel);
             }
 
-            if(customer.Id == 0)
-              _context.Customers.Add(customer);
+            if (customer.Id == 0)
+                _context.Customers.Add(customer);
             else
             {
                 var customerInDb = _context.Customers.Single(c => c.Id == customer.Id);
@@ -66,11 +64,12 @@ namespace Vidly.Controllers
                 customerInDb.MembershipTypeId = customer.MembershipTypeId;
                 customerInDb.IsSubscribedToNewsletter = customer.IsSubscribedToNewsletter;
             }
+
             _context.SaveChanges();
             return RedirectToAction("Index", "Customers");
         }
 
-      
+
         public ActionResult Details(int id)
         {
             var customer = _context.Customers.Include(c => c.MembershipType).SingleOrDefault(c => c.Id == id);
@@ -97,6 +96,5 @@ namespace Vidly.Controllers
 
             return View("CustomerForm", viewModel);
         }
-        
     }
 }
