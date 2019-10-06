@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace Vidly.Models
@@ -26,7 +25,5 @@ namespace Vidly.Models
         [Display(Name = "Number in Stock")]
         [Range(1, 20)]
         public byte NumberInStock { get; set; }
-
-        public byte NumberAvailable { get; set; }
     }
 }
